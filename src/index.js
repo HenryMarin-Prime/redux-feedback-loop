@@ -31,6 +31,12 @@ const feedbackReducer = (state  = feedback, action)=>{
           feeling: action.payload
         };
 }
+else if(action.type === 'ADD_UNDERSTANDING'){
+    return state = {
+        ...state,
+        understanding: action.payload
+    };
+}
     return state;
 }
 
