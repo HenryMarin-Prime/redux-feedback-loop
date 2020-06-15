@@ -5,6 +5,9 @@ import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
+import Feeling from '../Feeling/Feeling';
+import Understanding from '../Understanding/Understanding';
+
 
 class App extends Component {
 
@@ -60,7 +63,8 @@ class App extends Component {
         </header>
         <br/>
         <section>
-          
+           <Route exact path = "/" component={Feeling} />
+           <Route path = "/understanding" component={Understanding} />
         </section>
       </div>
       </Router>
