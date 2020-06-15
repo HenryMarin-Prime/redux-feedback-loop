@@ -43,6 +43,12 @@ else if(action.type === 'ADD_SUPPORT'){
         support: action.payload
     };
 }
+else if(action.type === 'ADD_COMMENTS'){
+    return state = {
+        ...state,
+        comments: action.payload
+    };
+}
     return state;
 }
 
