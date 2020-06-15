@@ -8,6 +8,8 @@ import {connect} from 'react-redux';
 import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
+
 
 
 class App extends Component {
@@ -67,6 +69,7 @@ class App extends Component {
            <Route exact path = "/" component={Feeling} />
            <Route path = "/understanding" component={Understanding} />
            <Route path = "/support" component={Support} />
+           <Route path = "/comments" component={Comments} />
         </section>
       </div>
       </Router>
