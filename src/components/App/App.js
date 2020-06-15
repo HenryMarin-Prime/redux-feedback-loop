@@ -8,6 +8,28 @@ import {connect} from 'react-redux';
 
 class App extends Component {
 
+  componentDidMount() {
+    this.getFeedback();
+  }
+
+  getFeedback = () => {
+    console.log( `in getFeedback...` );
+    
+    axios({
+      method: 'GET',
+      url: '/feedback'
+    })
+    .then( (response) => {
+      console.log( `Got feedback data from server!` );
+      const action = { type: 'GET_FEEDBACK', payload: response.data };
+      this.props.dispatch( action );
+    })
+    .catch( (error) => {
+      console.log( `Error getting feedback.`, error );
+      alert( `Sorry, couldn't get feedback data. Try again later.` );
+    })
+  }
+
   render() {
     return (
       <Router>
