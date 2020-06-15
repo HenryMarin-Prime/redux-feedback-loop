@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import {HashRouter as Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
-import Feeling from '../Feeling/Feeling';
+import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
@@ -15,6 +15,7 @@ import Complete from '../Complete/Complete';
 
 
 class App extends Component {
+
 
   componentDidMount() {
     this.getFeedback();
@@ -34,7 +35,6 @@ class App extends Component {
     })
     .catch( (error) => {
       console.log( `Error getting feedback.`, error );
-      alert( `Sorry, couldn't get feedback data. Try again later.` );
     })
   }
 
@@ -68,7 +68,7 @@ class App extends Component {
         </header>
         <br/>
         <section>
-           <Route exact path = "/" component={Feeling} />
+           <Route exact path = "/" component={Feelings} />
            <Route path = "/understanding" component={Understanding} />
            <Route path = "/support" component={Support} />
            <Route path = "/comments" component={Comments} />
