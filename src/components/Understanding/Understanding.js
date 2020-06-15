@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Feedback from '../FeedBack/Feedback';
+import Review from '../Review/Review';
 
 class Understanding extends Component{
 
@@ -39,7 +39,7 @@ class Understanding extends Component{
                 <button type="submit">Next</button>
                 </form>
             <div>
-                <Feedback />
+                <Review />
             </div>
             </section>
         );

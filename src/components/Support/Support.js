@@ -1,3 +1,7 @@
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import Review from '../Review/Review';
+
 class Support extends Component{
 
     state = {
@@ -35,7 +39,7 @@ class Support extends Component{
                 <button type="submit">Next</button>
                 </form>
             <div>
-                <Feedback />
+                <Review />
             </div>
             </section>
         );
