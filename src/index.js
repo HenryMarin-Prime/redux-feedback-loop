@@ -37,6 +37,12 @@ else if(action.type === 'ADD_UNDERSTANDING'){
         understanding: action.payload
     };
 }
+else if(action.type === 'ADD_SUPPORT'){
+    return state = {
+        ...state,
+        support: action.payload
+    };
+}
     return state;
 }
 
