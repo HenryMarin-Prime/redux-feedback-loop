@@ -30,6 +30,26 @@ class App extends Component {
     })
   }
 
+  submitFeedback = (feedback) => {
+    console.log( `in submitFeedback...`, feedback );
+
+    axios({
+      method: 'POST',
+      url: '/feedback',
+      data: feedback
+    })
+    .then( (response) => {
+      console.log( `Added feedback.` );
+      const action = { type: 'EMPTY' };
+      this.props.dispatch( action );
+
+    })
+    .catch( (error) => {
+      console.log( `Error adding feedback.`, error );
+      alert( `Could not submit feedback. Try again later.`);
+    })
+  } 
+
   render() {
     return (
       <Router>
