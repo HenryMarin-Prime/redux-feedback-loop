@@ -7,9 +7,17 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 
+
+const storeFeedback = ( state = [], action ) => {
+    if( action.type === 'GET_FEEDBACK' ){
+        return state = action.payload;
+    }
+    return state;
+}
+
 const storeInstance = createStore(
     combineReducers({
-        
+        storeFeedback
     }),
     applyMiddleware(logger),
 );
