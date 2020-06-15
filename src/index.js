@@ -49,6 +49,9 @@ else if(action.type === 'ADD_COMMENTS'){
         comments: action.payload
     };
 }
+else if(action.type === 'EMPTY'){
+    return state= feedback;
+}
     return state;
 }
 
