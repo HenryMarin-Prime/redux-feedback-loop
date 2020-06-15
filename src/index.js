@@ -8,6 +8,15 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux';
 
 
+const feedback = {
+    feeling: '',
+    understanding:'',
+    support:'',
+    comments:'',
+};
+
+
+
 const storeFeedback = ( state = [], action ) => {
     if( action.type === 'GET_FEEDBACK' ){
         return state = action.payload;
